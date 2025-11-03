@@ -46,3 +46,11 @@ variable "environment" {
   type        = string
   default     = "dev"
 }
+
+# Optional: present in terraform.tfvars but not used by this config.
+# Declaring it avoids Terraform warnings about undeclared variables.
+variable "lambda_execution_role_arn" {
+  description = "Optional role ARN for Lambda (not used by this module)"
+  type        = string
+  default     = null
+}
