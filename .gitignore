@@ -1,0 +1,61 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors/IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Logs
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.venv/
+venv/
+.env
+
+# Go
+*.exe
+*.test
+*.out
+coverage.txt
+bin/
+vendor/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.tfstate.lock.info
+# Keep lock file by default
+# .terraform.lock.hcl
+terraform.tfvars
+
+# Node (if any)
+node_modules/
+
+# Docker
+*.tar
+
+# Load testing artifacts
+loadtest/*_locust_*.csv
+loadtest/*.html
+
+# Notebooks
+*.ipynb_checkpoints
+
+# Misc
+*.swp
+*.swo

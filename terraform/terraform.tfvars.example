@@ -1,0 +1,29 @@
+# Copy this file to terraform.tfvars and fill in real values.
+# Do NOT commit terraform.tfvars to git (it is gitignored).
+
+project_name = "hw08"
+aws_region   = "us-west-2"
+
+# IAM role ARNs used by ECS tasks and Lambda (if applicable)
+ecs_task_execution_role_arn = "arn:aws:iam::<ACCOUNT_ID>:role/<ROLE_NAME>"
+ecs_task_role_arn           = "arn:aws:iam::<ACCOUNT_ID>:role/<ROLE_NAME>"
+lambda_execution_role_arn   = "arn:aws:iam::<ACCOUNT_ID>:role/<ROLE_NAME>"
+
+# Container images
+receiver_image  = "<ACCOUNT_ID>.dkr.ecr.<REGION>.amazonaws.com/hw08:latest"
+processor_image = "<ACCOUNT_ID>.dkr.ecr.<REGION>.amazonaws.com/hw08:latest"
+
+desired_count_receiver  = 1
+desired_count_processor = 0
+
+worker_goroutines = 100
+payment_permits   = 100
+container_port    = 8080
+
+# RDS/MySQL
+db_user = "cartuser"
+db_pass = "<REPLACE_ME>"
+db_name = "cartdb"
+
+# Database backend: "mysql" for MySQL/RDS, "dynamodb" for DynamoDB
+db_backend = "mysql"
